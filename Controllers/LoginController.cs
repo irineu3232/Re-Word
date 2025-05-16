@@ -26,10 +26,10 @@ namespace Re_World.Controllers
                 var usuario = _loginRepositorio.ObterUsuario(Email);
                 if (usuario != null && usuario.Senha == senha)
                 {
-                    return RedirectToAction("Index", "Produto");
+                    return RedirectToAction("Index","Produto");
                 }
 
-                ModelState.AddModelError("", "Erro, informações invalidas");
+                ModelState.AddModelError("","Erro, informações invalidas");
                 return View();
             }
         }

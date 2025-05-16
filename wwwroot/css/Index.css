@@ -1,8 +1,17 @@
 ﻿body {
 }
 
-.tb
-{
-    border:2px solid rgb(255 0 0);
+.form1 {
+    border: 2px solid rgb(0,0,0);
+    display: block;
+    text-align: center;
+    padding: 10px;
+    max-width: 700px;
+    background: linear-gradient(to left top, #A4F6F9,#75F1AF);
+    margin: 0 auto;
+    border-radius: 5px;
+}
 
+.dv1 {
+    padding:5px;
 }

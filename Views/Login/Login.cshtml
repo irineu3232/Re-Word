@@ -1,6 +1,6 @@
 ﻿@model Re_World.Models.Usuarios;
 
-<link rel="StyleSheet"  href="../wwwroot/css/Index.css" />
+<link href="../wwwroot/css/Index.css" rel="StyleSheet" />
 <form asp-action="Login" method="post"  class="form1" style="border:2px solid rgb(0,0,0); display:block; text-align:center; padding:10px; max-width:700px; background: linear-gradient(to left top, #A4F6F9,#75F1AF);margin:0 auto; border-radius:5px;">
 
    
@@ -9,11 +9,10 @@
         <input type="email" name="email" required class="in" style="font-size:1.2rem; border-radius:5px; text-align:center; font-family:sans-serif; font-style:italic;" />
     </div>
 
-    @*style="padding:5px;"*@
     <div class="dv1" style="padding:5px;">
         <label style="font-size:1.2rem; font-family:sans-serif; font-style:italic;">Senha:</label>
         <input type="password" name="email" required class="in" style="font-size:1.2rem; border-radius:5px; text-align:center; font-family:sans-serif; font-style:italic;" />
     </div>
-    <input type="submit" class="btn btn-success align-items-center btn-success:hover" style=" btn-sucess:hover{ background: darkgreen; transform:scale(1.2);}" value="Login" />
+    <input type="submit" class="btn btn-success align-items-center btn-success:hover"  value="Login" />
 
 </form>
