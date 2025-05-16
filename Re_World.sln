@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Re_World", "Re_World.csproj", "{F3632E0C-76D6-4863-8E59-DA4C846068EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3632E0C-76D6-4863-8E59-DA4C846068EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3632E0C-76D6-4863-8E59-DA4C846068EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3632E0C-76D6-4863-8E59-DA4C846068EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3632E0C-76D6-4863-8E59-DA4C846068EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A4E65B41-51B9-4F47-ABC4-7CFDC4B28713}
+	EndGlobalSection
+EndGlobal
