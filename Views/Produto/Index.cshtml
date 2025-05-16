@@ -1,5 +1,8 @@
 ﻿@model IEnumerable<Re_World.Models.Produtos>
 
+
+<link href="~/../../../área de trabalho/re_world/wwwroot/css/index.css" rel="stylesheet" />
+
 <body>
     <p>
         <a asp-controller="Produto" asp-action="CadastrarProduto" class="btn btn-primary">Cadastrar Produto</a>
@@ -46,10 +49,10 @@
                         @Html.DisplayFor(modelItem => item.Quantidade)
                     </td>
                     <td class="">
-                        <a asp-controller="Produto" asp-action="EditarProduto" asp-route-id="@item.Id" class="">Editar</a>
+                        <a asp-controller="Produto" asp-action="EditarProduto" asp-route-id="@item.Id" class="btn btn-danger">Editar</a>
                         <span>|</span>
                         <a asp-controller="Produto" asp-action="ExcluirProduto" asp-route-id="@item.Id"
-                           onclick="return confirm('Deseja realmente Excluir esse produto?');" class="">Excluir</a>
+                           onclick="return confirm('Deseja realmente Excluir esse produto?');" class=" btn btn-primary">Excluir</a>
                     </td>
                 </tr>
             }
