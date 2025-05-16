@@ -1,0 +1,40 @@
+﻿*
+{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-style:italic;
+    font-family:sans-serif;
+}
+
+.formularios
+{
+    text-align:center;
+    margin:0 auto;
+    padding: 3px;
+    border:2px solid rgb(128, 128, 128);
+}
+
+.label1
+{
+    font-size:1.2rem;
+    font-weight:700;
+}
+
+.input1
+{
+    border-radius:5px;
+    text-align:center;
+    font-size:1.2rem;
+}
+
+.cadastrar1, .voltar{
+    display:inline;
+    font-size:1.2rem;
+    text-decoration:underline;
+}
+
+.dv1{
+    padding:3px;
+    box-shadow: 3px 2px 3px 1px inset rgb(0,0,0);
+}

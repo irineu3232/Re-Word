@@ -1,19 +1,20 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@*Não consegui utilizar o css de forma externa... mesmo colocando o ponto e a hashatag para id ou classe. Então usei o style para customizar. Vou tentar resolver em casa. Então para não ficar sem estilização, o elemento style no código para fazer o css. Em todas as páginas... algumas vezes funcionava o css e outras vezes ele ignorava*@
 <link href="~/../../../área de trabalho/new_tech/wwwroot/css/home.css" rel="stylesheet" />
-
+<body style="background:linear-gradient(to left top, #056300, #0a464f,#022b0f)">
 <div class="text-center">
     <header>
-        <video autoplay muted loop class="video">
-            <source src="~/../../../%c3%a1rea%20de%20trabalho/new_tech/wwwroot/video/videos.mp4" type="video/mp4" />
+            <video autoplay muted loop controls="controls" class="video" style="padding:10px; margin-bottom:40px;position: absolute;bottom:20px;left: 10px;width: 90%;object-fit: cover; z-index: -1; left:67px; height:85%">
+            <source src="~/../../../%c3%a1rea%20de%20trabalho/re-word/wwwroot/video/videotec.mp4" type="video/mp4" />
         </video>
-
-        <div class="titulo">
-            <h1>Seja bem vindo a New-Techs</h1>
+        <div class="titulo text-light">
+            <h1>Seja bem vindo a Re:World</h1>
         </div>
-        <a asp-actio"Index" asp-controller="Produto">Produto</a>
+        <a asp-actio"Index" asp-controller="Produto" class="btn btn-primary">Produto</a>
 
     </header>
 
 </div>
+</body>

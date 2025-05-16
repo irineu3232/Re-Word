@@ -1,51 +1,52 @@
 ﻿@model Re_World.Models.Produtos;
 
-<h1>Editar Produto</h1>
 
+<body style="background:linear-gradient(to left top, #056300, #0a464f)">
 <div>
     <div>
-        <form asp-action="EditarProduto" method="post">
+        <form asp-action="EditarProduto" method="post" style=" text-align:center;margin:0 auto;padding: 3px;border:2px solid rgb(128, 128, 128); box-shadow: 2px 3px 2px 3px rgb(0,0,0) solid; background:linear-gradient(to left, #919ded, #62f0e2)">
+            <h1>Editar Produto</h1>
             @Html.AntiForgeryToken()
             <div>
-                <input type="hidden" aps-for="Id" class="form-control" />
+                <input type="hidden" aps-for="Id" class="form-control input1" />
                 <span asp-validation-for="Id" class="text-danger"></span>
             </div>
 
-            <div class="">
-                <label asp-for="Nome" class=""></label>
-                <input asp-for="Nome" class="" />
+            <div class="dv1" style=" padding:3px; border-bottom:1px solid rgb(0,0,0);">
+                <label asp-for="Nome" class="label1" style=" font-size:1.2rem;font-weight:700;"></label>
+                <input asp-for="Nome" class="input1" style="border-radius:5px;text-align:center;font-size:1.2rem;" required />
                 <span asp-validation-for="Nome" class=""></span>
             </div>
 
 
-            <div class="">
-                <label asp-for="Descricao" class=""></label>
-                <input asp-for="Descricao" class="" />
+            <div class="dv1" style=" padding:3px; border-bottom:1px solid rgb(0,0,0);">
+                <label asp-for="Descricao" class="label1" style=" font-size:1.2rem;font-weight:700;"></label>
+                <input asp-for="Descricao" class="input1" style="border-radius:5px;text-align:center;font-size:1.2rem;" required />
                 <span asp-validation-for="Descricao" class=""></span>
             </div>
 
-            <div class="">
-                <label asp-for="Preco" class=""></label>
-                <input asp-for="Preco" class="" />
+            <div class="dv1" style=" padding:3px; border-bottom:1px solid rgb(0,0,0);">
+                <label asp-for="Preco" class="label1" style=" font-size:1.2rem;font-weight:700;"></label>
+                <input asp-for="Preco" class="input1" style="border-radius:5px;text-align:center;font-size:1.2rem;" required />
                 <span asp-validation-for="Preco" class=""></span>
             </div>
 
-            <div class="">
-                <label asp-for="Quantidade" class=""></label>
-                <input asp-for="Quantidade" class="" />
+            <div class="dv1" style=" padding:3px; border-bottom:1px solid rgb(0,0,0);">
+                <label asp-for="Quantidade" class="label1" style=" font-size:1.2rem;font-weight:700;"></label>
+                <input asp-for="Quantidade" class="input1" style="border-radius:5px;text-align:center;font-size:1.2rem;" required />
                 <span asp-validation-for="Quantidade" class=""></span>
             </div>
 
-            <div class="btn">
-                <div class="form-group">
-                    <input type="submit" value="Alterar" class="btn btn-primary" />
-                </div>
+            <div class="dv1" style=" padding:3px; border-bottom:1px solid rgb(0,0,0);">
+                <input type="submit" value="Alterar" class=" btn btn-success cadastrar1" style=" display:inline;font-size:1.2rem;text-decoration:underline;" />
+                <a asp-action="Index" class=" btn btn-danger voltar" style=" display:inline;font-size:1.2rem;text-decoration:underline;">Voltar</a>
+            </div>
 
-                <div class="form-group">
-                    <a asp-action="Index" class="btn btn-success">Voltar</a>
-                </div>
+
 
 
         </form>
     </div>
 </div>
+
+</body>
