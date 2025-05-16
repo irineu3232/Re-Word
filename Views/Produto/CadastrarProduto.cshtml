@@ -1,0 +1,44 @@
+﻿@model New_Tech.Models.Produtos
+
+
+<div>
+    <form asp-action="CadastrarProduto" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div>
+            <input type="hidden" aps-for="Id" class="form-control" />
+            <span asp-validation-for="Id" class="text-danger"></span>
+        </div>
+
+        <div class="">
+            <label asp-for="Nome" class=""></label>
+            <input asp-for="Nome" class="" />
+            <span asp-validation-for="Nome" class=""></span>
+        </div>
+
+
+        <div class="">
+            <label asp-for="Descricao" class=""></label>
+            <input asp-for="Descricao" class="" />
+            <span asp-validation-for="Descricao" class=""></span>
+        </div>
+
+        <div class="">
+            <label asp-for="Preco" class=""></label>
+            <input asp-for="Preco" class="" />
+            <span asp-validation-for="Preco" class=""></span>
+        </div>
+
+        <div class="">
+            <label asp-for="Quantidade" class=""></label>
+            <input asp-for="Quantidade" class="" />
+            <span asp-validation-for="Quantidade" class=""></span>
+        </div>
+
+        <div>
+            <input type="submit" value="Cadastrar" class="" />
+        </div>
+        <div>
+            <a asp-action="Index" class="">Voltar</a>
+        </div>
+    </form>
+</div>

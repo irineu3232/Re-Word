@@ -1,0 +1,61 @@
+﻿@model IEnumerable<New_Tech.Models.Produtos>
+
+<body>
+    <p>
+        <a asp-controller="Produto" asp-action="CadastrarProduto" class="btn btn-primary">Cadastrar Produto</a>
+    </p>
+    <table class="table tb">
+        <thead>
+
+            <tr class="d-table-row table-dark">
+                <th>
+                    @Html.DisplayNameFor(Model => Model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(Model => Model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(Model => Model.Descricao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(Model => Model.Preco)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(Model => Model.Quantidade)
+                </th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="table-bordered table-light">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descricao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Preco)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantidade)
+                    </td>
+                    <td class="">
+                        <a asp-controller="Produto" asp-action="EditarProduto" asp-route-id="@item.Id" class="">Editar</a>
+                        <span>|</span>
+                        <a asp-controller="Produto" asp-action="ExcluirProduto" asp-route-id="@item.Id"
+                           onclick="return confirm('Deseja realmente Excluir esse produto?');" class="">Excluir</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+
+</body>
