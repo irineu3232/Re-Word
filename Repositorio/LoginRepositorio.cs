@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
-using Re_World.Models;
 using System.Data;
+using Re_World.Models;
+
 
 namespace Re_World.Repositorio
 {
@@ -16,7 +17,7 @@ namespace Re_World.Repositorio
             {
                 conexao.Open();
 
-                MySqlCommand cmd = new("SELECT * from Usuarios where Email = @Email", conexao);
+                MySqlCommand cmd = new("SELECT * FROM Usuario where Email = @Email", conexao);
                 cmd.Parameters.Add("@Email", MySqlDbType.VarChar).Value = email;
 
 

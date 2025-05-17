@@ -1,37 +1,38 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Re_World.Repositorio;
 using Re_World.Models;
+using Re_World.Repositorio;
+using Org.BouncyCastle.Tls;
 
-namespace Re_World.Controllers
+
+
+namespace New_Tech.Controllers
 {
-   
-        public class LoginController : Controller
+    public class LoginController : Controller
+    {
+        private readonly LoginRepositorio _loginRepositorio;
+
+        public LoginController(LoginRepositorio loginRepositorio)
         {
-            private readonly LoginRepositorio _loginRepositorio;
-
-            public LoginController(LoginRepositorio loginRepositorio)
-            {
-                _loginRepositorio = loginRepositorio;
-            }
-
-
-            public IActionResult Login()
-            {
-                return View();
-            }
-
-            [HttpPost]
-            public IActionResult Login(string Email, string senha)
-            {
-                var usuario = _loginRepositorio.ObterUsuario(Email);
-                if (usuario != null && usuario.Senha == senha)
-                {
-                    return RedirectToAction("Index","Produto");
-                }
-
-                ModelState.AddModelError("","Erro, informações invalidas");
-                return View();
-            }
+            _loginRepositorio = loginRepositorio;
         }
-}
 
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Login(string email, string senha)
+        {
+            var usuario = _loginRepositorio.ObterUsuario(email);
+            if (usuario != null && usuario.Senha == senha)
+            {
+                return RedirectToAction("Index", "Produto");
+            }
+
+            ModelState.AddModelError("", "Erro informações invalidas");
+            return View();
+        }
+    }
+}

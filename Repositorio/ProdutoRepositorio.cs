@@ -14,7 +14,7 @@ namespace Re_World.Repositorio
             {
                 conexao.Open();
 
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO Produtos(Nome,Descricao,Preco,Quantidade) values(@Nome,@Descricao,@Preco,@Quantidade)", conexao);
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO Produto(Nome,Descricao,Preco,Quantidade) values(@Nome,@Descricao,@Preco,@Quantidade)", conexao);
                 cmd.Parameters.Add("@Nome", MySqlDbType.VarChar).Value = produto.Nome;
                 cmd.Parameters.Add("@Descricao", MySqlDbType.VarChar).Value = produto.Descricao;
                 cmd.Parameters.Add("@Preco", MySqlDbType.Decimal).Value = produto.Preco;
@@ -33,7 +33,7 @@ namespace Re_World.Repositorio
                 {
                     conexao.Open();
 
-                    MySqlCommand cmd = new MySqlCommand("Update Produtos set Nome=@nome, Descricao=@descricao, Preco=@preco, Quantidade=@quantidade " + " where Id=@id ", conexao);
+                    MySqlCommand cmd = new MySqlCommand("Update Produto set Nome=@nome, Descricao=@descricao, Preco=@preco, Quantidade=@quantidade " + " where Id=@id ", conexao);
 
                     cmd.Parameters.Add("@id", MySqlDbType.Int32).Value = produto.Id;
                     cmd.Parameters.Add("@nome", MySqlDbType.VarChar).Value = produto.Nome;
@@ -62,7 +62,7 @@ namespace Re_World.Repositorio
             {
                 conexao.Open();
 
-                MySqlCommand cmd = new MySqlCommand("SELECT * from Produtos", conexao);
+                MySqlCommand cmd = new MySqlCommand("SELECT * from Produto", conexao);
 
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
 
@@ -96,7 +96,7 @@ namespace Re_World.Repositorio
             {
                 conexao.Open();
 
-                MySqlCommand cmd = new MySqlCommand("SELECT * from Produtos where Id=@id", conexao);
+                MySqlCommand cmd = new MySqlCommand("SELECT * from Produto where Id=@id", conexao);
                 cmd.Parameters.AddWithValue("@id", id);
 
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
@@ -126,7 +126,7 @@ namespace Re_World.Repositorio
             using (var conexao = new MySqlConnection(_conexaoMySQL))
             {
                 conexao.Open();
-                MySqlCommand cmd = new MySqlCommand("delete from Produtos where Id=@Id", conexao);
+                MySqlCommand cmd = new MySqlCommand("delete from Produto where Id=@Id", conexao);
 
                 cmd.Parameters.AddWithValue("@Id", id);
                 int i = cmd.ExecuteNonQuery();
