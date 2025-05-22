@@ -43,7 +43,7 @@ namespace Re_World.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult EditarProduto(int id, [Bind("Id, Nome,Descricao,Preco,Qauntidade")] Produtos produto)
+        public IActionResult EditarProduto(int id, [Bind("Id, Nome,Descricao,Preco,Quantidade ")] Produtos produto)
         {
             if (id != produto.Id)
             {
