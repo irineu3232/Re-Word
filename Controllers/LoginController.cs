@@ -26,7 +26,7 @@ namespace New_Tech.Controllers
         public IActionResult Login(string email, string senha)
         {
             var usuario = _loginRepositorio.ObterUsuario(email);
-            if (usuario != null && usuario.Senha == senha)
+            if (usuario.Email != null && usuario.Senha !=null)
             {
                 return RedirectToAction("Index", "Produto");
             }
